@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/resources/style2.css">
+    <script src="/resources/main2.js"></script>
+    <title>Estoque</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">System.F.A.S</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listagem.html">Controle de comandas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/inserirdados.html">Criar nova comanda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/editar.html">Lançamento de produtos</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    Sistemas de controle de comandas Ver1.0
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex justify-content-center mb-2">
+        <input type="text center" id="InputID">
+
+        <button class="btn btn-primary" onclick="updateListID()">Localizar comanda</button>
+    </div>
+    <table class="table table-borderless">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Espeto</th>
+                <th>Refrigerante</th>
+                <th>Cerveja</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+    </div>
+    </div>
+    
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="form">
+                <h1 class="text-center">Sistema de criação de comanda</h1>
+                <h3 class="text-center">Sistema gera automáticamente o código da comanda</h3>
+                <div>
+                    <div class="d-flex flex-column">
+                            <div class="d-flex flex-column mt-2">
+                            <label>Quantidade de espeto</label>
+                            <input type="text" id="inputEspeto">
+                        </div>
+                        <div class="d-flex flex-column mt-2">
+                            <label>Quantidade refrigerante</label>
+                            <input type="text" id="inputRefri">
+                        </div>
+                        <div class="d-flex flex-column mt-2">
+                            <label>Quantidade cerveja</label>
+                            <input type="text" id="inputCerveja">
+                        </div>
+                </div>
+
+                </div>
+                <div class="d-flex justify-content-end">
+                    <input type="button" value="Confirmar" onclick="inserir()">
+                    <input type="button" value="Limpar" class="ml-2" onclick="clearForm()">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
