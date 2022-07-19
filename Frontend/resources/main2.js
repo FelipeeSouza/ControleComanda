@@ -124,7 +124,7 @@ function remove() {
     })
     .then(response => res.json())
     .then(data => {
-        // Informar se houve um erro ou atualizar a lista caso ocorra tudo certo
+        
         if(data['success'] == true) {
             updateList();
         }   
