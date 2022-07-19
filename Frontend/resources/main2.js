@@ -94,7 +94,7 @@ function atualizar() {
     })
     .then(response => response.json())
     .then(data => {
-        // Informar se houve um erro ou atualizar a lista caso ocorra tudo certo
+    
         if(data['success'] == true) {
             updateList();
         }   
